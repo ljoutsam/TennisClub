@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="formules">
+    @if(formules.length > 0){
+        <div class="mx-auto">
+            <h2 class="text-center"> Formules du Tennis club</h2>
+            <ul class="text-center">
+                @for (formule of formules; track formule.nomFormule) {
+                    <div class="formule">
+                        <h3>{{ formule.nomFormule }}</h3>
+                        <p>{{ formule.description }}</p>
+                        <p>Prix : {{ formule.prix }}€</p>
+                    </div>
+                }
+            </ul>
+        </div>
+    }
+</div>
+
+<app-footer></app-footer>

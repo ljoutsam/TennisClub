@@ -1,0 +1,59 @@
+  <app-header></app-header>
+
+    <div class="register-container">
+        <h2>Inscription</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input 
+                    type="text" 
+                    id="nom" 
+                    formControlName="nom" 
+                    placeholder="Veuillez saisir votre nom" />
+            </div>
+
+            <div class="form-group">
+                <label for="prenom">Prenom</label>
+                <input type="text" 
+                id="prenom" 
+                formControlName="prenom" 
+                placeholder="Veuillez saisir votre prenom" />
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" 
+                    id="email" 
+                    formControlName="email" 
+                    placeholder="Entrez votre email" />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    formControlName="motdepasse" 
+                    placeholder="Entrez votre mot de passe" />
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirmez le mot de passe</label>
+                <input 
+                    type="password" 
+                    id="confirmPassword" 
+                    formControlName="confirmPassword" 
+                    placeholder="Entrez votre mot de passe" />
+                    @if(registerForm.hasError('passwordMismatch')){
+                        <div>
+                            Les mots de passe ne correspondent pas.
+                        </div>
+                    }
+                        
+            </div>
+            <button type="submit" [disabled]="!registerForm.valid">S'inscrire</button>
+        </form>
+    </div>
+    
+<app-footer></app-footer>

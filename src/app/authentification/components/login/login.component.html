@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<div class="login-container">
+  <h2>Connexion</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label for="username">Nom d'utilisateur</label>
+          <input type="text" id="username" formControlName="username" placeholder="Votre nom d'utilisateur" />
+      </div>
+      <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" formControlName="password" placeholder="Votre mot de passe" />
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Se connecter</button>
+  </form>
+</div>
+  
+  <app-footer></app-footer>

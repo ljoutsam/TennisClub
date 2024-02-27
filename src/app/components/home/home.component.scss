@@ -1,0 +1,120 @@
+.section1 {
+  text-align: center;
+  display: flex; /* Utiliser la flexbox pour aligner horizontalement */
+}
+
+.half {
+  flex: 1; /* Chaque moitié prend 50% de l'espace disponible */
+  padding: 20px; /* Ajouter un espacement si nécessaire */
+  border: 1px solid #ccc; /* Ajouter une bordure pour séparer visuellement les deux moitiés */
+}
+
+
+.section2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 100; /* Taille fixe pour toutes les images, ajustez selon vos besoins */
+}
+
+.carousel-inner img {
+  width: 60%; /* Pour assurer que toutes les images occupent la largeur du conteneur */
+  height: 60%; /* Pour assurer que toutes les images occupent la hauteur du conteneur */
+  object-fit: cover; /* Pour maintenir les proportions de l'image et la remplir complètement */
+
+}
+
+carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-80%);
+  color: rgba(255, 255, 255, 1); /* Couleur du texte avec une opacité de 1 (pas de transparence) */
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent noir pour améliorer la lisibilité du texte */
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+carousel-caption h5 {
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-weight: normal; /* Pour annuler le gras sur le paragraphe si nécessaire */
+}
+
+club-description {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+
+.body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Hauteur minimale égale à la hauteur de la fenêtre visible */
+  padding-top: 60px;
+}
+
+/* Styles pour les div dans la partie body */
+.body div {
+  border: none; /* Supprime la bordure pour les div dans la partie body */
+}
+
+/* Styles pour les div dans la partie body */
+.body div {
+  border: none; /* Supprime la bordure pour les div dans la partie body */
+}
+
+.half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+//les avis
+.section3 {
+  text-align: center;
+  padding: 20px;
+}
+
+.review {
+  margin-bottom: 20px;
+}
+
+.rating {
+  font-size: 24px;
+}
+
+.star {
+  color: #FFD700; /* Couleur de l'étoile (jaune ici) */
+}
+
+
+
+  
+ 

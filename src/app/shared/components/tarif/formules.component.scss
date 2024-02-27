@@ -1,0 +1,60 @@
+/* styles.css */
+
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+div {
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #304d2b;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h3 {
+  color: #007bff;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.formules{
+  margin-bottom: 300px;
+}
+
+@keyframes blink {
+  0% { background-color: transparent; }
+  50% { background-color: #ffcc00; }
+  100% { background-color: transparent; }
+}
+
+
+.formule {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  /* Transition fluide pour le changement de couleur de fond */
+  transition: background-color 0.3s ease; 
+}
+
+/* Application de l'animation de clignotement lors du survol */
+.formule:hover {
+  animation: blink 1s infinite; /* Lancer l'animation de clignotement */
+}
