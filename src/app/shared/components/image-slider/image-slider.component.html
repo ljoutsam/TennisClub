@@ -22,6 +22,15 @@
         <button (click)="previous()" class="previousButton" >
             <fa-icon [icon]="faArrowLeft"></fa-icon>
         </button> -->
+        @if (control) {
+            <div class="btn-carousel btn-prev" (click)="previous()">
+                <i class="fas fa-arrow-circle-left icon-carousel icon-prev"></i> 
+            </div>
+            <div class="btn-carousel btn-next" (click)="next()">
+                <i class="fas fa-arrow-circle-right icon-carousel icon-next"></i> 
+            </div>
+        }
+        
         
 
     </div>

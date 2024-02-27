@@ -60,3 +60,16 @@ a {
     color: white;
     border-radius: 10px;
 }
+
+.header-container {
+  padding: 10px;
+}
+
+input[type="text"] {
+  width: 150px;
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 10px;
+}

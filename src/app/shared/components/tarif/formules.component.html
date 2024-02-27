@@ -1,10 +1,10 @@
-<app-header></app-header>
+<app-header [formules]="formules" (filteredFormules)="onFilteredFormules($event)"></app-header>
 <div class="formules">
-    @if(formules.length > 0){
-        <div class="mx-auto">
+    @if(filteredFormules.length > 0){
+        <div class="mx-auto" *ngIf="filteredFormules && filteredFormules.length > 0">
             <h2 class="text-center"> Formules du Tennis club</h2>
             <ul class="text-center">
-                @for (formule of formules; track formule.nomFormule) {
+                @for (formule of filteredFormules; track formule.nomFormule) {
                     <div class="formule">
                         <h3>{{ formule.nomFormule }}</h3>
                         <p>{{ formule.description }}</p>
@@ -12,6 +12,12 @@
                     </div>
                 }
             </ul>
+        </div>
+    }
+    @else {
+        <h2>Aucune formule trouvée, faite une nouvelle recherche...</h2>
+        <div class="loading-container">
+            <div class="loading-animation"></div>
         </div>
     }
 </div>

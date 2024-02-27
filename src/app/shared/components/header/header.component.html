@@ -27,6 +27,14 @@
             </ul>
         </div>
         <div class="right">
+            
+               
+            <div class="header-container" *ngIf="currentUrl.includes('formules')">
+            <input type="text" 
+                (input)="handleInputChange($event)" 
+                placeholder="Recherche...">
+            </div>
+              
             <ul class="nav-links">
                 <li><a routerLink="/formules" routerLinkActive="active">Formules</a></li>
                 <li><a href="https://ballejaune.com/club/ctpt">Réservation</a></li>
