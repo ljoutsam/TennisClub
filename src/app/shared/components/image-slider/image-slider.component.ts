@@ -7,7 +7,7 @@ import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './image-slider.component.scss'
 })
 export class ImageSliderComponent {
-  slides :any[] = [
+  @Input() slides :any[] = [
     
     {
       url:'/assets/images/exterieur2.jpeg',
@@ -64,14 +64,17 @@ export class ImageSliderComponent {
   currentSlide = 0;
   faArrowRight = faArrowRight;
   faArrowLeft = faArrowLeft;
-  hidden = false; // Déclarez une entrée pour le statut caché
-  autoPlay = true
+  hidden = false; 
+
+  @Input() autoPlay = true
+  @Input() control = true
+
+  constructor(){
+  }
 
   next(): void {
-   
     let currentSlide =(this.currentSlide + 1) % this.slides.length;
     this.jumpToSlide(currentSlide);
-    
   }
 
   previous() : void{
@@ -80,19 +83,17 @@ export class ImageSliderComponent {
   }
 
   jumpToSlide(index : number) : void { 
-    
     this.hidden = true;
     setTimeout(() => {
       this.currentSlide = index;
       this.hidden = false;
-    }, 500)
+    }, 600)
   }
 
-  constructor(){
+  ngOnInit(): void {
     if(this.autoPlay){
       setInterval(()=>{
         this.next();
-
       },3000)
     }
   }
